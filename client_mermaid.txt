@@ -1,0 +1,40 @@
+classDiagram
+    class Client {
+        -int id
+        -string firstName
+        -string lastName
+        -string email
+        -string phoneNumber
+        -DateTime dateOfBirth
+        -Address address
+        -DateTime createdAt
+        -DateTime updatedAt
+        
+        +Client(firstName: string, lastName: string, email: string)
+        +getId() int
+        +getFirstName() string
+        +setFirstName(firstName: string) void
+        +getLastName() string
+        +setLastName(lastName: string) void
+        +getEmail() string
+        +setEmail(email: string) void
+        +getPhoneNumber() string
+        +setPhoneNumber(phoneNumber: string) void
+        +getDateOfBirth() DateTime
+        +setDateOfBirth(dateOfBirth: DateTime) void
+        +getAddress() Address
+        +setAddress(address: Address) void
+        +getFullName() string
+        +getAge() int
+        +isAdult() bool
+        +toString() string
+    }
+    
+    class Address {
+        -string street
+        -string city
+        -string postalCode
+        -string country
+    }
+    
+    Client --> Address : has
